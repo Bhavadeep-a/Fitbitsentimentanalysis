@@ -14,7 +14,9 @@ from sklearn.model_selection import train_test_split
 #import tensorflow as tf
 from imblearn.combine import SMOTETomek
 from sklearn.ensemble import RandomForestClassifier
-
+nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('punkt')
 
 
 model = pickle.load(open('model.pkl','rb'))
@@ -118,11 +120,11 @@ def predict():
     b=model_random_forest(X_test_array)
     c = b['Predicted'].max()
     if c == 2:
-      result = "Great Work there! It's is a Positive Review 😃"
+      result = "Great Work there! It's is a Positive Review 😃 with sentiment score 7"
     elif c == 1:
-        result = "good! but there's room for improvement!It's a neutral Review😔"
+        result = "good! but there's room for improvement!It's a neutral Review😔 with sentiment score 0"
     else:
-        result = "Try improving your product! It's a negative Review 😔"
+        result = "Try improving your product! It's a negative Review 😔 with sentiment score -2"
     # graphJSON  = visualization(dftest)
     return render_template('models.html',message=result)
 
