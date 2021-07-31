@@ -19,6 +19,7 @@ nltk.download('stopwords')
 nltk.download('punkt')
 
 
+
 model = pickle.load(open('model.pkl','rb'))
 
 data_raw = pd.read_csv('Fitbit_versa2_reviews_English.csv')
