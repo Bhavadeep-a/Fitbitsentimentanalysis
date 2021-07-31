@@ -7,6 +7,7 @@ import re
 import string
 import spacy
 from nltk.corpus import stopwords
+nltk.tokenize.punkt
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer, TfidfTransformer
