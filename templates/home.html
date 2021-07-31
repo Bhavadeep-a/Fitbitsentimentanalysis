@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HomePage</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css')}}">
+    
+
+</head>
+<body style="background-color:whitesmoke;">
+    
+<ul>
+  <li style="float:right"><a href="models">Model</a></li>
+  <li style="float:right"><a href="visualizations">Visualizations</a></li>
+  <li style="float:right"><a class="active" href="home">Dashboard</a></li>
+</ul>
+
+<div class="slideshow-container">
+
+    <div class="mySlides slideBox fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="{{url_for('static',filename='images/fitbit.png')}}">
+      <div class="text1">Sentiment Analysis of FITBIT Versa 2</div>
+    </div>
+    
+    <div class="mySlides slideBox fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="{{url_for('static',filename='images/fit.jpeg')}}" style="width:100%">
+      <div class="text">Fitbit Versa 2 A health & fitness smartwatch that elevates every moment.</div>
+    </div>
+    
+    <div class="mySlides slideBox fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="{{url_for('static',filename='images/SENTIMENT-09-1.png')}}" style="width:100%">
+      
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    <div style="padding: 2%;background:whitesmoke;">
+      <div class="background">
+        <div class="transbox">
+          <h2 style="text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Sentiments Analysis On FITBIT Versa 2 Reviews</h2>
+        </div>
+        <div class="flex-container">
+          <div class="box">
+            <div class="img-con">
+              <img src="{{url_for('static',filename='images/s.png')}}"  >
+            </div>
+            <div class="text-con">
+              <p>
+                Sentiment Analysis 
+              </p>
+              <p>Sentiment analysis is one of the Natural Language Processing fields, dedicated to the exploration of subjective opinions or feelings collected from various sources about a particular subject.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-con">
+              <img src="{{url_for('static',filename='images/fb1.jpg')}}"  >
+            </div>
+            <div class="text-con">
+              <p>
+                Fitbit Versa 2
+              </p>
+              <p>Fitbit Versa 2 is a fitness and health tracker which tracks heart beat, SPO2 and contains apps like music,steps tracker etc. Its a product where helps to track your pulse and oxygen levels.</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="img-con">
+              <img src="{{url_for('static',filename='images/fb2.jpg')}}"  >
+            </div>
+            <div class="text-con">
+              <p>
+                Sentiment Analysis on Fitbit Versa2
+              </p>
+              <p>The objective of our project is to analyze all the reviews and find to whether the product is worth buying by reviewing different aspects and recommend to the customer.</p>
+            </div>
+          </div>
+        </div> 
+        <div class="flex-container2"> 
+          <div>
+            <h5 style="text-align: center;">Top 5 Positive Reviews 😃😃😃</h5>
+           <p class="para-style" style="background-color: lightgreen">Great synch with fitness Pal, no problem with iPhone synch so far.</p>
+           <p class="para-style" style="background-color:plum">There is a community section and you can add your friends to motivate and support each other which is very nice.</p>
+           <p class="para-style" style="background-color: rgb(240, 120, 140);">It looks smart and goes with every outfit and it doubles up as a nice accessory as well as being functional.</p>
+           <p class="para-style" style="background-color: rgb(243, 188, 86);">I you wish you can track your calories and the food you've eaten or the water you have dank.</p>
+           <p class="para-style" style="background-color: skyblue;">Easy to install and a lot more advanced than my last one. More features, clear screen. Very happy with this buy.</p>
+          </div>
+          <div>
+              <h5 style="text-align: center;">Top 5 Negative Reviews 😡😡😡</h5>
+             <p class="para-style" style="background-color: rgb(163, 159, 159);">You just pay for the brand and not quality which makes it very bad value for money!</p>
+             <p class="para-style" style="background-color: rgb(214, 120, 120);"> we were allowed to enter our own foods with a barcode (for the odd missing item) it would be a lot better still.</p>
+             <p class="para-style" style="background-color: rgb(114, 114, 235);">I wasn't fat and haven't worked hard for this but having everything in one app has helped me realise what I was doing badly!</p>
+             <p class="para-style" style="background-color:rgb(182, 137, 182);">Don't' really know why you would waste your money on an iWatch etc when you can get this.</p>
+             <p class="para-style" style="background-color: rgb(29, 142, 150);">The only bad point is that Fitbit seems to give me a few hundred extra steps a day when I ride the motorbike.</p>
+
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 10000); // Change image every 2 seconds
+    }
+    </script>
+    
+</body>
+</html>

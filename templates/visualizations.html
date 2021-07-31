@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visualizations</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/visstyle.css')}}">
+</head>
+<body style = 'background-color:lightgrey;'>
+    <div style="background: white;width: 100%;height: 50px;">
+      <h1 style="padding: 1%;text-align: center;padding-bottom: 4%;">Visualizations</h1>
+    </div>
+    <div>
+        <ul>
+          <li style="float:right"><a href="models">Model</a></li>
+          <li style="float:right"><a class="active" href="visualizations">Visualizations</a></li>
+          <li style="float:right"><a href="home">Dashboard</a></li>
+         
+          </ul>
+    </div>
+    <div class="flex-container">
+        <div>
+            <img src="{{url_for('static',filename='images/rating.png')}}"  >
+        </div>
+        <div>
+            <img src="{{url_for('static',filename='images/pie.png')}}" >
+        </div>
+        <div>
+            <img src="{{url_for('static',filename='images/boxplot.png')}}" >
+        </div>  
+      </div> 
+      <div class="flex-container2"> 
+        <div>
+            <img src="{{url_for('static',filename='images/wordfrequencybar.png')}}" height="50px"  >
+        </div>
+        <div>
+            <h5>Fitbit Reviews Data</h5>
+<table>
+  <tr>
+    <th>Reviews</th>
+    <th>Ratings</th>
+    
+  </tr>
+  <tr>
+    <td>Hi,I had to return this item as it wouldn't download to my phone and still waiting for a refund</td>
+    <td>1</td>
+    
+  </tr>
+  <tr>
+    <td>Love this tracker watch. Unfortunately I am allergic to it and waiting for my wrist to heal/get used to it.</td>
+    <td>5</td>
+    
+  </tr>
+  <tr>
+    <td>Is a good watch but it loose connections a lot, I had to synchronise and set it up 4 time in 3 weeks ,this the reason I returned.</td>
+    <td>4</td>
+    
+  </tr>
+  <tr>
+    <td>Love this tracker watch. Unfortunately I am allergic to it and waiting for my wrist to heal/get used to it.</td>
+    <td>5</td>
+    
+</tr>
+<tr>
+    <td>Returned mine as I couldn't get it to receive notifications from my iPhone and for some reason, there was a delay of an hour or so when it tracked my sleep.  Disappointing.</td>
+    <td>3</td>
+    
+</tr>
+</table>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div style="width: 50%;">
+            <img src="{{url_for('static',filename='images/accuracy.png')}}"  >
+        </div>
+        <div style="width: 50%;">
+            <img src="{{url_for('static',filename='images/reviewbar.png')}}" >
+        </div>
+         
+      </div> 
+      <div class="flex-container1">
+        <div>
+            <img src="{{url_for('static',filename='images/wordcloud.png')}}" height="200px">
+        </div>  
+      </div> 
+</body>
+</html>
